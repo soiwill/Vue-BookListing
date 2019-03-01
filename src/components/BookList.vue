@@ -2,16 +2,17 @@
 <div>
     <h1>{{title}}</h1>
 </div>
+
 </template>
 
 <script>
 export default {
-    name: "My Happy BookList",
-    data() {
+    name: "BookList",
+    data(){
         return {
-            title: "My All Books"
+            title: "All Books"
         }
-    },
+    }
 }
 </script>
 
