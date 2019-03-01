@@ -1,45 +1,44 @@
 <template>
-<div>
+  <div>
     <h1>{{title}}</h1>
     <ul>
-        <li>Book 1</li>
-        <li>Book 2</li>
-        <li>Book 3</li>
+      <li v-for="book in books">{{book.title}}:{{book.author}}</li>
     </ul>
     <ul>
-        <li v-for="book in books">{{book.title}}... Content:{{book.author}}</li>
+      <li>Book 1</li>
+      <li>Book 2</li>
+      <li>Book 3</li>
     </ul>
-    
-</div>
-
+  </div>
 </template>
 
 <script>
 export default {
-    name: "BookList",
-    data(){
-        return {
-            title: "All Books",
-            books: [
-                {title:"Sol", author:"Sol Author"},
-                {title:"Yvonne", author:"Yvonne Author"},
-                {title:"Daughter", author:"Daughter"}
-            ]
-        }
-    }
-}
+  name: "BookList",
+  data() {
+    return {
+      title: "All Books",
+      books: [
+        { title: "Self-Reliance", author: "Ralph Waldo Emerson" },
+        { title: "American Gods", author: "Neil Gaiman" },
+        { title: "Amusing Ourselves to Death", author: "Neil Postman" }
+      ]
+    };
+  }
+};
 </script>
 
 <style>
-h1, h2 {
-    font-weight: normal
+h1,
+h2 {
+  font-weight: normal;
 }
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 li {
-    display: block;
-    padding: 0 10px;
+  display: block;
+  margin: 0 10px;
 }
 </style>
